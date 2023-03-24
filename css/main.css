@@ -1,0 +1,137 @@
+:root {
+    --dark-color: #161b27;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+    --mainhead-color:#ea738d;
+  }
+  body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #161b27;
+    scroll-behavior: smooth;
+    
+  }
+  .main-btn {
+    background-color: white;
+    color: var(--dark-color);
+    padding: 0.5rem 1rem;
+    font-size: 22px;
+  }
+  .navbar {
+    background-color: var(--dark-color);
+    font-family: 'Cairo Play', cursive;
+  }
+  .navbar-collapse{
+    text-align: end;
+  }
+  .navbar .navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+  }
+  .navbar .container{
+    flex-direction: row-reverse ;
+  }
+  .navbar .container > div >h2{
+  text-align: end;
+  }
+  .navbar .navbar-nav .nav-link.active,
+  .navbar .navbar-nav .nav-link:focus,
+  .navbar .navbar-nav .nav-link:hover {
+    color: var(--mainhead-color);
+  }
+  .navbar .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: var(--mainhead-color);
+  }
+  .navbar .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--mainhead-color);
+  }
+  .navbar-collapse{
+    text-align: center;
+  }
+  .navbar .navbar-collapse ul {
+    margin: auto;
+  }
+  .navbar .navbar-collapse ul li {
+    padding: 0 20px;
+  }
+
+  .navbar button{
+    margin: 0 auto 0 0;
+  }
+  .images img{
+    background-color: #ffffffc4  !important;
+    transition: .3s;
+  }
+  .doaa{
+    margin: 40px 0;
+    color: white;
+    text-align: center;
+  }
+  .mainhead{
+    font-family: 'Cairo Play', cursive;
+    /* color: var(--mainhead-color); */
+    display: inline-block;
+    text-align: center;
+    padding:5px 20px ;
+    border: 2px solid var(--mainhead-color);
+    background-color:  var(--mainhead-color);
+    color: #161b27;
+    border-radius: 20px;
+  }
+  .yomferamadan{
+    margin: 40px 0;
+    color: white;
+    text-align: center;
+  }
+  .yomferamadan iframe{
+    padding: 20px;
+  }
+  .yomferamadan .container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+  
+  /* Then style the iframe to fit in the container div with full height and width */
+  .yomferamadan .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .live-harm{
+    margin: 40px 0;
+    color: white;
+    text-align: center;
+  }
+  .live-harm iframe{
+    padding: 20px;
+  }
+  .live-harm .container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+  
+  /* Then style the iframe to fit in the container div with full height and width */
+  .live-harm .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  } 
