@@ -35,15 +35,15 @@ let doaaArray = [
 
 let videosArray = [
     '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
+    'https://www.youtube.com/embed/3DIAt81qzmY',
+    'https://www.youtube.com/embed/06rLChOk03o',
+    'https://www.youtube.com/embed/10TexGZIA5o',
+    'https://www.youtube.com/embed/a92QC8dyDHE',
+    'https://www.youtube.com/embed/TDGqVdO2ZXQ',
+    'https://www.youtube.com/embed/1kL5o4QVWYY',
+    'https://www.youtube.com/embed/JpgRnAlzUOM',
+    'https://www.youtube.com/embed/loD8IkSlPzs',
+    'https://www.youtube.com/embed/R9Jg5TQOMF4',
     '',
     '',
     '',
@@ -66,35 +66,43 @@ let videosArray = [
     '',
 ];
 
-console.log(videosArray.length);
-let mainIndex =3;
+let mainIndex = 4;
 let date = new Date();
-let day = date.getDay();
+part1(mainIndex);
+doaaFun(mainIndex);
+videosFun(mainIndex);
 function editContent(){
     setInterval(function(){
-        day=date.getDay();
-        mainIndex = day;
-    },1000)
+        day=date.getDate();
+        mainIndex = mainIndex + 1;
+        part1(mainIndex);
+        doaaFun(mainIndex);
+        videosFun(mainIndex);
+    },72000000)
 }
+
 editContent();
-console.log(mainIndex-3);
 
 // part 1
-function part1(){
-    
-    let quranIndex = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+function part1(dayIndex){
+    let quranIndex = [82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101];
     let next = document.querySelector('.carousel-control-prev');
     let prev = document.querySelector('.carousel-control-next');
     const URL = 'https://raw.githubusercontent.com/BetimShala/quran-images-api/master/quran-images/';
     let image = document.querySelector('.images img');
+    quranIndex = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];
+    dayIndex =dayIndex -1;
+    for(let i = 0 ; i<20 ; i++){
+        quranIndex[i]=quranIndex[i]+(dayIndex * 20);
+    }
     image.src = URL+quranIndex[0]+'.png';
     let index = 0;
+
     next.onclick = function(){
         index = (index+1)%20;
         let varURL = String(quranIndex[index]) +'.png';
         let newURL = URL+varURL;
         image.src = newURL;
-        // console.log(newURL);
     }
     prev.onclick = function(){
         if(index != 0){
@@ -105,12 +113,13 @@ function part1(){
         image.src = newURL;
 }
 }
-part1();
-
-// end part1
-let doaa = document.querySelector('.doaa h4');
-doaa.textContent = doaaArray[mainIndex-3];
-// part2
-
+function doaaFun(dayIndex){
+    let doaa = document.querySelector('.doaa h4');
+    doaa.textContent = doaaArray[mainIndex-1];
+}
+function videosFun(dayIndex){
+    let video = document.querySelector('.minuteRamadan');
+    video.src = videosArray[dayIndex-1];
+}
 
 
