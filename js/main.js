@@ -66,7 +66,7 @@ let videosArray = [
     '',
 ];
 
-let mainIndex = 6;
+let mainIndex = 7;
 let date = new Date();
 part1(mainIndex);
 doaaFun(mainIndex);
